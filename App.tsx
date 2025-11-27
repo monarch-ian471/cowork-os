@@ -292,6 +292,12 @@ const App: React.FC = () => {
         isOpen={isSettingsOpen} 
         onClose={() => setIsSettingsOpen(false)} 
       />
+      <section className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs text-white/50 italic">
+        <footer className="mt-24 text-sm font-mono text-neutral-600">
+              <p>Designed & Built by Monarch</p>
+              <p className="mt-2 text-xs">© {new Date().getFullYear()} All rights reserved.</p>
+        </footer>
+      </section>
     </div>
   );
 };
