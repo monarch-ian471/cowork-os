@@ -1,4 +1,3 @@
-
 export type Role = 'ADMIN_OPS' | 'ADMIN_FINANCE';
 
 export interface User {
@@ -8,11 +7,14 @@ export interface User {
   name: string;
 }
 
+export type View = 'DASHBOARD' | 'VENDORS' | 'CLIENTS' | 'ASSETS' | 'PROJECTS' | 'ANALYTICS';
+
 export enum Importance {
   CRITICAL = 'Critical', // Rent, Security, Electricity
   HIGH = 'High',
   MEDIUM = 'Medium',
   LOW = 'Low',
+  HOLD = 'Hold', // Special status to pause payment
 }
 
 export enum InvoiceStatus {
@@ -84,13 +86,13 @@ export interface Project {
 }
 
 export interface AppSettings {
-  weightImportance: number; 
-  weightAge: number; 
-  weightAmount: number; 
+  weightImportance: number; // weight for importance score
+  weightAge: number;        // weight for invoice age
+  weightAmount: number;     // weight for amount
 }
 
 export interface AnalyticsGoals {
   monthlyRevenue: number;
-  clientRetention: number; // Percentage
+  clientRetention: number;
   projectCount: number;
 }

@@ -1,5 +1,5 @@
-
 import { VendorInvoice, AppSettings, Importance, InvoiceStatus } from './types';
+import { LS_KEYS, DEFAULT_SEED, DEFAULT_DATA_URL } from './constants';
 
 export const formatCurrency = (amount: number): string => {
   return new Intl.NumberFormat('en-US', {
@@ -110,4 +110,48 @@ export const processInvoices = (
 // Simple ID Generator
 export const generateId = (prefix: string) => {
   return `${prefix}-${Math.random().toString(36).substr(2, 6).toUpperCase()}`;
+};
+
+// Load seed data
+export const loadSeedData = async (): Promise<any | null> => {
+  try {
+    const res = await fetch(DEFAULT_DATA_URL, { cache: 'no-store' });
+    if (!res.ok) {
+      return DEFAULT_SEED;
+    }
+    const json = await res.json();
+    return json || DEFAULT_SEED;
+  } catch (e) {
+    console.warn('Failed to load seed data, falling back to constants defaults', e);
+    return DEFAULT_SEED;
+  }
+};
+
+export const readLocalData = (): any | null => {
+  try {
+    const raw = localStorage.getItem(LS_KEYS.DATA);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+};
+
+export const persistAllToLocal = (payload: any) => {
+  try {
+    localStorage.setItem(LS_KEYS.DATA, JSON.stringify(payload));
+  } catch (e) { /* ignore write errors */ }
+};
+
+export const downloadJSON = (payload: any, filename = 'cowork-data-export.json') => {
+  const json = JSON.stringify(payload, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 };
