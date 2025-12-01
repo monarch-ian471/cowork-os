@@ -32,16 +32,17 @@
     }
   ],
   "vendorInvoices": [
-    { "id": "1", "vendorName": "Landlord Holdings", "category": "Rent", "invoiceDate": "2023-10-01", "dueDate": "2023-10-05", "amount": 8500.00, "importance": "Critical", "status": "Hold" },
-    { "id": "2", "vendorName": "City Power & Light", "category": "Utilities", "invoiceDate": "2023-09-28", "dueDate": "2023-10-10", "amount": 1200.50, "importance": "Critical", "status": "Hold" },
-    { "id": "3", "vendorName": "SecureGuard Inc", "category": "Security", "invoiceDate": "2023-10-01", "dueDate": "2023-10-15", "amount": 2500.00, "importance": "High", "status": "Hold" }
+    { "id": "1", "vendorName": "Landlord", "category": "Rent", "invoiceDate": "2023-10-01", "dueDate": "2023-10-05", "amount": 2300000.00, "importance": "Critical", "status": "Hold" },
+    { "id": "2", "vendorName": "ESCOM", "category": "Utilities", "invoiceDate": "2023-09-28", "dueDate": "2023-10-10", "amount": 100000.00, "importance": "Critical", "status": "Hold" },
+    { "id": "3", "vendorName": "ESCOM", "category": "Utilities", "invoiceDate": "2023-09-28", "dueDate": "2023-10-10", "amount": 150000.00, "importance": "Critical", "status": "Hold" },
+    { "id": "4", "vendorName": "Security Services", "category": "Security", "invoiceDate": "2023-10-01", "dueDate": "2023-10-15", "amount": 270000.00, "importance": "High", "status": "Hold" }
   ],
   "clients": [
-    { "id": "CL-001", "name": "TechFlow Solutions", "email": "billing@techflow.io", "officeNumber": "101", "contractStart": "2023-01-01", "contractEnd": "2024-12-31", "status": "Active" },
-    { "id": "CL-002", "name": "Design Studio 9", "email": "hello@ds9.com", "officeNumber": "102", "contractStart": "2023-03-01", "contractEnd": "2024-06-30", "status": "Active" }
+    { "id": "CL-001", "name": "Traction Palladium", "email": "sakavictor@thepalladiumgroup.com", "officeNumber": "101", "contractStart": "2023-01-01", "contractEnd": "2024-12-31", "status": "Active" },
+    { "id": "CL-002", "name": "JBJ Foundation", "email": "ktiwari@jbjfoundation.com", "officeNumber": "102", "contractStart": "2023-03-01", "contractEnd": "2024-06-30", "status": "Active" }
   ],
   "clientInvoices": [
-    { "id": "INV-001", "clientId": "CL-001", "clientName": "TechFlow Solutions", "description": "Oct Rent", "amount": 2500, "invoiceDate": "2023-10-01", "dueDate": "2023-10-06", "status": "Paid", "isReceiptIssued": true, "source": "Internal" }
+    { "id": "INV-001", "clientId": "CL-001", "clientName": "Traction Palladium", "description": "Oct Rent", "amount": 2500, "invoiceDate": "2023-10-01", "dueDate": "2023-10-06", "status": "Paid", "isReceiptIssued": true, "source": "Internal" }
   ],
   "assets": [
     { "id": "A-001", "name": "Conference Table", "category": "Furniture", "purchaseDate": "2022-02-01", "value": 450, "location": "Floor 1" }

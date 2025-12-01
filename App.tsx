@@ -350,7 +350,6 @@ const App: React.FC = () => {
               Handover Session
             </button>
 
-            {/* Footer moved into sidebar, centered below handover session to avoid overlapping visuals */}
             <div className="mt-4 pt-3 text-center text-xs text-white/50">
               <p>{companyInfo.builtBy ? `Designed & Built by ${companyInfo.builtBy}` : 'Designed & Built by Monarch'}</p>
               <p className="mt-1 text-[10px]">© {companyInfo.copyrightYear ?? new Date().getFullYear()} All rights reserved.</p>
