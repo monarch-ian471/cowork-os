@@ -35,7 +35,8 @@
     { "id": "1", "vendorName": "Landlord", "category": "Rent", "invoiceDate": "2023-10-01", "dueDate": "2023-10-05", "amount": 2300000.00, "importance": "Critical", "status": "Hold" },
     { "id": "2", "vendorName": "ESCOM", "category": "Utilities", "invoiceDate": "2023-09-28", "dueDate": "2023-10-10", "amount": 100000.00, "importance": "Critical", "status": "Hold" },
     { "id": "3", "vendorName": "ESCOM", "category": "Utilities", "invoiceDate": "2023-09-28", "dueDate": "2023-10-10", "amount": 150000.00, "importance": "Critical", "status": "Hold" },
-    { "id": "4", "vendorName": "Security Services", "category": "Security", "invoiceDate": "2023-10-01", "dueDate": "2023-10-15", "amount": 270000.00, "importance": "High", "status": "Hold" }
+    {"id": "4", "vendorName": "LWB", "category": "Utilities", "invoiceDate": "2023-10-01", "dueDate": "2023-10-15", "amount": 200000.00, "importance": "High", "status": "Hold" },
+    { "id": "5", "vendorName": "Security Services", "category": "Security", "invoiceDate": "2023-10-01", "dueDate": "2023-10-15", "amount": 270000.00, "importance": "High", "status": "Hold" }
   ],
   "clients": [
     { "id": "CL-001", "name": "Traction Palladium", "email": "sakavictor@thepalladiumgroup.com", "officeNumber": "101", "contractStart": "2023-01-01", "contractEnd": "2024-12-31", "status": "Active" },
